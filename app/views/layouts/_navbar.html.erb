@@ -21,6 +21,7 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to 'Inventory', items_path %></li>
         <% if current_user %>
         <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
         <li><%= link_to 'Profile', edit_user_registration_path %></li>
