@@ -38,6 +38,7 @@ gem 'jbuilder', '~> 2.5'
 # CUSTOM GEM IMPORT
 gem 'twitter-bootstrap-rails'
 gem 'simple_form'
+gem 'devise'
 
 
 group :development, :test do
