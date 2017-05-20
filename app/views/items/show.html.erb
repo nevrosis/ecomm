@@ -1,29 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @item.name %>
-</p>
 
-<p>
-  <strong>Author:</strong>
-  <%= @item.author %>
-</p>
+<div class="row">
+  <div class="col-md-6">
+    <%= image_tag "item/01.jpg", class: 'img-responsive' %>
+  </div>
+  <div class="col-md-6">
+    <h1><%= @item.name %></h1>
+    <p><%= @item.description %></p>
+    <p><%= @item.description %></p>
+    <p class="text-center">$ <%= @item.price/100 %></p>
+  </div>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @item.description %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @item.price %>
-</p>
-
-<p>
-  <strong>Availability:</strong>
-  <%= @item.availability %>
-</p>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
