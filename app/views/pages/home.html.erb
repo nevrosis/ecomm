@@ -1,2 +1,16 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="jumbotron">
+  <h1>Welcome to eComm</h1>
+  <p>Sell like you shoud!</p>
+  <p>
+    <%= link_to 'Inventory', new_user_session_path, class: 'btn btn-primary btn-lg' %>
+  </p>
+  <% if !current_user %>
+  <p>
+    <%= link_to 'Login', new_user_session_path, class: 'btn btn-info' %>
+    <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-info' %>
+  </p>
+  <% end %>
+  <p>
+    <a class="" href="#" role="button">Learn more</a>
+  </p>
+</div>
