@@ -1,9 +1,10 @@
 <div class="col-md-3">
   <div class="thumbnail">
+    <%= link_to 'edit', edit_item_path(item) %>
     <%= image_tag 'item/01.jpg', class: 'img-responsive' %>
     <div class="caption">
       <p><%= link_to item.name, item_path(item) %></p>
-      <p>$ <%= item.price / 100 %></p>
+      <p>$ <%= item.price %></p>
       <!--<p><%= item.description %></p>-->
       <p></p>
     </div>
