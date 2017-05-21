@@ -20,6 +20,8 @@ class ItemsController < ApplicationController
 
   # GET /items/1/edit
   def edit
+    # CanCan
+    authorize! :manage, @item
   end
 
   # POST /items
@@ -42,6 +44,8 @@ class ItemsController < ApplicationController
   # PATCH/PUT /items/1
   # PATCH/PUT /items/1.json
   def update
+    # CanCan
+    authorize! :manage, @item
     respond_to do |format|
       if @item.update(item_params)
         format.html { redirect_to @item, notice: 'Item was successfully updated.' }
@@ -56,6 +60,8 @@ class ItemsController < ApplicationController
   # DELETE /items/1
   # DELETE /items/1.json
   def destroy
+    # CanCan
+    authorize! :manage, @item
     @item.destroy
     respond_to do |format|
       format.html { redirect_to items_url, notice: 'Item was successfully destroyed.' }
