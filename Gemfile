@@ -41,6 +41,8 @@ gem 'simple_form'
 gem 'devise'
 gem 'cancan'
 gem "paperclip", "~> 5.0.0"
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'aws-sdk', '~> 2'
 
 
 group :development, :test do
