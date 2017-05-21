@@ -1,4 +1,7 @@
 class Item < ApplicationRecord
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+
   belongs_to :user
   has_attached_file :image
   has_attached_file :document
@@ -10,6 +13,7 @@ class Item < ApplicationRecord
   validates_attachment :document,
   content_type: { content_type: "application/pdf" },
   message: 'Only pdf allowed'
+
 
 
 end
