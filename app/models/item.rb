@@ -3,6 +3,8 @@ class Item < ApplicationRecord
   friendly_id :name, use: :slugged
 
   belongs_to :user
+  has_many :sales
+
   has_attached_file :image
   has_attached_file :document
 
