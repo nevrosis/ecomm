@@ -1,0 +1,18 @@
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @purchased.each do |sale| %>
+    <tr>
+      <th><%= sale.item.id %></th>
+      <td><%= link_to sale.item.name, pickup_path(sale.uuid) %></td>
+      <td><%= time_ago_in_words(sale.created_at) %> ago</td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
