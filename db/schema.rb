@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170521222931) do
+ActiveRecord::Schema.define(version: 20170522162237) do
 
   create_table "friendly_id_slugs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "slug",                      null: false
@@ -51,8 +51,12 @@ ActiveRecord::Schema.define(version: 20170521222931) do
     t.integer  "amount"
     t.string   "uuid"
     t.integer  "item_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.string   "state"
+    t.string   "stripe_id"
+    t.string   "stripe_token"
+    t.text     "error",        limit: 65535
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
