@@ -1,0 +1,13 @@
+=======================
+RAILS PRODUCTION
+=======================
+RAILS_ENV=production bin/rails assets:precompile
+
+=======================
+HEROKU
+=======================
+heroku login
+heroku create ecomm-app-dp
+git push heroku master
+heroku run rake db:migrate
+heroku open
